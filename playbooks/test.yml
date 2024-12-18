@@ -1,0 +1,11 @@
+- name: First test
+  hosts: localhost
+  tasks:
+  - name: Hello world
+    shell:
+      cmd: echo "hello"
+    register:  hello
+
+  - debug:
+      msg: "{{ hello }}"
+
